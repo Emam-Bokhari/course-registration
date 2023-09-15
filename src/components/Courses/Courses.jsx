@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Course from "../Course/Course"
 import PropTypes from 'prop-types'
 
-const Courses = ({addCourse}) => {
+const Courses = ({ addCourse }) => {
     const [courses, setCourses] = useState([])
 
     useEffect(() => {
@@ -11,21 +11,19 @@ const Courses = ({addCourse}) => {
             .then(data => setCourses(data))
     }, [])
 
-
-
     return (
         <div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:my-10">
-            {
-                courses.map(item => <Course key={item.id} data={item} addCourse={addCourse}/>)
-            }
+                {
+                    courses.map(item => <Course key={item.id} data={item} addCourse={addCourse} />)
+                }
             </div>
         </div>
     )
 }
 
-    Courses.propTypes={
-        addCourse:PropTypes.func.isRequired
-    }
+Courses.propTypes = {
+    addCourse: PropTypes.func.isRequired
+}
 
 export default Courses

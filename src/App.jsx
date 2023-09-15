@@ -8,27 +8,35 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
 
   const [selectCourse, setSelectCourse] = useState([])
-  const [totalCredit,setTotalCredit]=useState(0)
-  const [totalRemaingCredit,setTotalRemainingCredit]=useState(20)
-    const addCourse = (course) => {
-    let creditHours=course.credit
-    const isIncluded=selectCourse.find(item=>item.id===course.id)
-    if(isIncluded){
+  const [totalCredit, setTotalCredit] = useState(0)
+  const [totalRemaingCredit, setTotalRemainingCredit] = useState(20)
+  const [totalCoursePrice, setTotalCoursePrice] = useState(0)
+  const addCourse = (course) => {
+    let creditHours = course.credit
+    let totalPrice = course.price
+
+    const isIncluded = selectCourse.find(item => item.id === course.id)
+
+    if (isIncluded) {
       return toast.warn("Already included this course")
     }
 
-    selectCourse.forEach(item=>{
-      creditHours=creditHours+item.credit
+    selectCourse.forEach(item => {
+      creditHours = creditHours + item.credit
     })
 
-    if(creditHours>20){
-     return toast.warn("You have no credit!")
+    if (creditHours > 20) {
+      return toast.warn("You have no credit!")
     }
 
-    
-    const remainingCredit=20-creditHours
+    const remainingCredit = 20 - creditHours
     setTotalRemainingCredit(remainingCredit)
     setTotalCredit(creditHours)
+
+    selectCourse.forEach(item => {
+      totalPrice = totalPrice + item.price
+    })
+    setTotalCoursePrice(totalPrice)
 
     const selectNewCourse = [...selectCourse, course]
     setSelectCourse(selectNewCourse)
@@ -41,7 +49,7 @@ const App = () => {
         <div className="flex flex-col-reverse md:flex-row gap-5">
           <Courses addCourse={addCourse} />
           <ToastContainer />
-          <Carts selectCourse={selectCourse} totalCredit={totalCredit} totalRemaingCredit={totalRemaingCredit}/>
+          <Carts selectCourse={selectCourse} totalCredit={totalCredit} totalRemaingCredit={totalRemaingCredit} totalCoursePrice={totalCoursePrice} />
         </div>
       </section>
     </div>
