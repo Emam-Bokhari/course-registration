@@ -9,6 +9,7 @@ const App = () => {
 
   const [selectCourse, setSelectCourse] = useState([])
   const [totalCredit,setTotalCredit]=useState(0)
+  const [totalRemaingCredit,setTotalRemainingCredit]=useState(20)
     const addCourse = (course) => {
     let creditHours=course.credit
     const isIncluded=selectCourse.find(item=>item.id===course.id)
@@ -19,11 +20,16 @@ const App = () => {
     selectCourse.forEach(item=>{
       creditHours=creditHours+item.credit
     })
+
+    if(creditHours>20){
+     return toast.warn("You have no credit!")
+    }
+
+    
+    const remainingCredit=20-creditHours
+    setTotalRemainingCredit(remainingCredit)
     setTotalCredit(creditHours)
- 
-   
-   
- 
+
     const selectNewCourse = [...selectCourse, course]
     setSelectCourse(selectNewCourse)
   }
@@ -35,7 +41,7 @@ const App = () => {
         <div className="flex flex-col-reverse md:flex-row gap-5">
           <Courses addCourse={addCourse} />
           <ToastContainer />
-          <Carts selectCourse={selectCourse} totalCredit={totalCredit}/>
+          <Carts selectCourse={selectCourse} totalCredit={totalCredit} totalRemaingCredit={totalRemaingCredit}/>
         </div>
       </section>
     </div>
