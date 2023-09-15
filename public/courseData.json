@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "course_name": "Introduction to C Programming",
+        "details": "Learn the fundamentals of C programming language, including syntax, data types, and basic algorithms.",
+        "img": "https://i.ibb.co/sP4c0qk/Rectangle-2-2.png",
+        "price": 1500,
+        "credit": 3
+    },
+    {
+        "id": 2,
+        "course_name": "Introduction to Algorithms",
+        "details": "Explore web development with HTML, CSS, and JavaScript. Build dynamic websites and applications.",
+        "img": "https://i.ibb.co/44JR1HX/Rectangle-2-3.png",
+        "price": 1200,
+        "credit": 5
+    },
+    {
+        "id": 3,
+        "course_name": "Introduction to C++ for DSA",
+        "details": "Master C++ for Data Structures and Algorithms, covering advanced topics and problem-solving techniques.",
+        "img": "https://i.ibb.co/YNKfFFP/Rectangle-2-4.png",
+        "price": 1800,
+        "credit": 7
+    },
+    {
+        "id": 4,
+        "course_name": "Fundamental Data Structures",
+        "details": "Learn the essentials of data structures, including arrays, linked lists, and stacks.",
+        "img": "https://i.ibb.co/tB5NDQW/Rectangle-3.png",
+        "price": 1600,
+        "credit": 2
+    },
+    {
+        "id": 5,
+        "course_name": "Software Engineering Principles",
+        "details": "Discover software engineering principles and best practices, from design to deployment.",
+        "img": "https://i.ibb.co/kmmdS0r/Rectangle-2.png",
+        "price": 1400,
+        "credit": 3
+    },
+    {
+        "id": 6,
+        "course_name": "Machine Learning Algorithms",
+        "details": "Get started with machine learning algorithms and techniques. Apply ML to real-world problems.",
+        "img": "https://i.ibb.co/ZJPMPfQ/Rectangle-2-5.png",
+        "price": 2000,
+        "credit": 5
+    },
+    {
+        "id": 7,
+        "course_name": "Cloud Computing with AWS",
+        "details": "Begin your journey to learn AWS and cloud computing services. Deploy scalable applications.",
+        "img": "https://i.ibb.co/sK1pRrB/Rectangle-3-1.png",
+        "price": 1300,
+        "credit": 7
+    },
+    {
+        "id": 8,
+        "course_name": "Database Management (MySQL)",
+        "details": "Manage your finances effectively with budgeting techniques. Learn SQL and database management.",
+        "img": "https://i.ibb.co/DrGjNYs/Rectangle-2-1.png",
+        "price": 1700,
+        "credit": 2
+    },
+    {
+        "id": 9,
+        "course_name": "Artificial Intelligence Basics",
+        "details": "Explore the basics of artificial intelligence and its applications in various domains.",
+        "img": "https://i.ibb.co/SKw0TJK/Rectangle-2-6.png",
+        "price": 1900,
+        "credit": 3
+    }
+]
