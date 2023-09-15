@@ -14,7 +14,7 @@ const Carts = ({ selectCourse, totalCredit }) => {
                     }
                 </ol>
                 <hr className="border-[1px] border-[#1C1B1B33]" />
-                <h2 className="text-[#1C1B1BCC] text-base font-medium">Total Credit Hour : {totalCredit}</h2>
+                <h2 className="text-[#1C1B1BCC] text-base font-medium">Total Credit Hour : {totalCredit}hr</h2>
                 <hr className="border-[1px] border-[#1C1B1B33]" />
                 <h2 className="text-[#1C1B1BCC] text-base font-medium">Total Price : 48000 USD</h2>
             </div>
@@ -23,7 +23,8 @@ const Carts = ({ selectCourse, totalCredit }) => {
 }
 
     Carts.propTypes={
-        selectCourse:PropTypes.array.isRequired
+        selectCourse:PropTypes.array.isRequired,
+        totalCredit:PropTypes.number.isRequired
     }
 
 export default Carts

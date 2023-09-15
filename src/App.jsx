@@ -10,14 +10,14 @@ const App = () => {
   const [selectCourse, setSelectCourse] = useState([])
   const [totalCredit,setTotalCredit]=useState(0)
     const addCourse = (course) => {
-    let creditHours=course.price
+    let creditHours=course.credit
     const isIncluded=selectCourse.find(item=>item.id===course.id)
     if(isIncluded){
       return toast.warn("Already included this course")
     }
 
     selectCourse.forEach(item=>{
-      creditHours=creditHours+item.price
+      creditHours=creditHours+item.credit
     })
     setTotalCredit(creditHours)
  
