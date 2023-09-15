@@ -31,6 +31,7 @@
   If the total credit is more than 20 hours, a toast message is displayed to notify the user.
 
   Credit Subtraction:
+<<<<<<< HEAD
   The remaining credit will be subtracted from the total credit hours and displayed in the cart view.
 
 ## Manage state of the project
@@ -64,3 +65,6 @@
   - Description: The Cart component represents an individual selected course item within the Carts component. It is responsible for displaying the course name.
 
   Overall, the project follows a common state management pattern in React, where the state is managed using the useState hook at the component level, and functions are passed down as props to handle state updates. This approach allows to keep track of selected courses, their credit hours, and prices while maintaining a responsive and interactive user interface.
+=======
+  The remaining credit will be subtracted from the total credit hours and displayed in the cart view
+>>>>>>> 99caaaee4fdd98cbf38f7c9d102aee330c9cab69
